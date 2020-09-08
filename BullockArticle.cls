@@ -189,9 +189,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %\usepackage{pstcol}
 \usepackage{datetime} % For formatting time of day on the title page.
-  \usdate % print in format "March 2, 2002"
-  \newdateformat{mydateformat}{\THEYEAR~\monthname[\THEMONTH]~\THEDAY}
-  \settimeformat{ampmtime}
+  \usdate                   % print in format "March 2, 2002"
+  \newdateformat{mydateformat}{\THEYEAR~\monthname[\THEMONTH]~\twodigit{\THEDAY}}
+  \settimeformat{ampmtime}  % as opposed to 24-hour time
 \usepackage{color}
   \definecolor{gray}{gray}{.50}
 
