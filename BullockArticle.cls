@@ -3,8 +3,10 @@
 
 
 % Passes and class options to the underlying article class
+\newif\iffnSingleSpace
 \newif\ifjustified
 \newif\ifwideMargins
+\DeclareOption{fnSingleSpace}{\fnSingleSpacetrue}
 \DeclareOption{justifiedText}{\justifiedtrue}
 \DeclareOption{wideMargins}{\wideMarginstrue}
 \DeclareOption*{\PassOptionsToClass{\CurrentOption}{article}}%
@@ -231,7 +233,11 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % FOOTNOTES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[big,doublespace]{footnotecommands} % options are "big", "doublespace"
+\iffnSingleSpace
+  \usepackage[big]{footnotecommands}
+\else
+  \usepackage[big,doublespace]{footnotecommands}
+\fi
 
 
 
