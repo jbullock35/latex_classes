@@ -225,6 +225,7 @@
     {%\bfseries
      \fontsize{14.5bp}{14.5bp}\selectfont%
      \scshape%
+     \phantomsection
      \MakeLowercase%
     }%
 }%
