@@ -144,6 +144,7 @@
 \usepackage{ifthen}
 \newboolean{anon}
 \newboolean{haveTAs}
+\newboolean{online}
 
 \usepackage[xxx]{optional}
   %\usepackage[note,notes]{optional}  % for editing.  I think all documentation is in optional.sty.
